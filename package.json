@@ -4,12 +4,13 @@
   "description": "Javascript version of Rosetta Mobile code project",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-core/register test",
+    "test": "mocha --require babel-core/register test"
   },
   "author": "Steve Hendricks",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "rxjs": "^5.5.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

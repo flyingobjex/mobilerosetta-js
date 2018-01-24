@@ -1,8 +1,5 @@
-let expect = require('chai').expect;
-
+import expect from 'chai';
 import { parseJsonText } from "../src/JsonExample";
-
-require('../src/JsonExample');
 
 let jsonString = `
   {
