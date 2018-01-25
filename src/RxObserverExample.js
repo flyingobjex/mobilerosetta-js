@@ -10,7 +10,7 @@ export class RxObserverExample {
     this.author = new Rx.Subject();
     this.author.subscribe((a = new Author()) => {
       self.currentName = a.name || 'no name';
-      self.currentID = a.id || 999
+      self.currentID = a.id || 999;
     });
   }
 
