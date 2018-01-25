@@ -1,4 +1,5 @@
 import Rx from 'rxjs'
+import { Author } from './Model'
 
 export class RxObserverExample {
 
@@ -7,7 +8,7 @@ export class RxObserverExample {
     const self = this;
 
     this.author = new Rx.Subject();
-    this.author.subscribe((a = {"name": "default"}) => {
+    this.author.subscribe((a = new Author()) => {
       self.currentName = a.name || 'no name';
       self.currentID = a.id || 999
     });

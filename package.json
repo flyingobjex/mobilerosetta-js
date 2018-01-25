@@ -1,5 +1,5 @@
 {
-  "name": "org.rosettamobile",
+  "name": "org.mobilerosetta",
   "version": "0.0.1",
   "description": "Javascript version of Rosetta Mobile code project",
   "main": "index.js",

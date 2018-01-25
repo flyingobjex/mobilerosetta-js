@@ -1,4 +1,4 @@
-import expect from 'chai';
+import { expect } from 'chai';
 import { parseJsonText } from "../src/JsonExample";
 
 let jsonString = `
