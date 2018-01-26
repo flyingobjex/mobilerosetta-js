@@ -8,7 +8,7 @@ export class RxObserverExample {
     const self = this;
 
     this.author = new Rx.Subject();
-    this.author.subscribe((a = new Author()) => {
+    this.author.subscribe((a = new Author()) => { // add default value to function to check null/undefined
       self.currentName = a.name || 'no name';
       self.currentID = a.id || 999;
     });
