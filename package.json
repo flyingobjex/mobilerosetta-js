@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --require babel-core/register test"
   },
-  "author": "Steve Hendricks",
+  "section": "Steve Hendricks",
   "license": "ISC",
   "dependencies": {
     "request": "^2.83.0",
