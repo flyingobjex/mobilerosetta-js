@@ -1,41 +1,18 @@
 import { expect } from 'chai';
-import { parseJsonText } from "../src/JsonExample";
-
-let jsonString = `
-  {
-    "title": "Main Collection",
-    "entry_list": [
-      {
-        "title": "First Model",
-        "pageid": 2442
-      },
-      {
-        "title": "Second Model",
-        "pageid": 2553,
-        "extra": "value ignored",
-        "author": {
-          "name": "Author 1",
-          "author_id": 1422
-        }
-      }
-    ]
-  }`;
+import { data } from "../src/Model"
+import { parse } from "../src/JsonExample";
 
 describe('Json Parsing Example', function(){
 
-  let collection = parseJsonText(jsonString);
+  let page = parse(data);
 
-  it('should map raw json key author_id to id in Author data class', function(){
-    expect(collection.entries[1].author.id).to.equal(1422);
+  it("it should map raw json keys 'pageid' to 'id', 'paragraphs_list' to 'paragraphs'", function(){
+      expect(page.id).to.equal(313);
+      expect(page.sections[0].sections[0].paragraphs.length).to.equal(2)
   });
 
 
-  it('should parse the json text into an object', function(){
-    console.log("running test");
-    expect(collection).to.be.a('object');
-    expect(collection.title).to.equal("Main Collection");
-    expect(collection.entries).to.be.a('array');
-    expect(collection.entries.length).to.equal(2);
-    expect(collection.entries[1].author.name).to.equal("Author 1");
+  it('should parse json data from string into page', function(){
+
   })
 });
