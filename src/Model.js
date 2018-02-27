@@ -7,7 +7,7 @@ export class WikiPage {
 }
 
 export class Section {
-  constructor(heading = "--", paragraphs = [], sections = []){
+  constructor(heading = "--", paragraphs = [], sections = []) {
     this.heading = heading;
     this.paragraphs = paragraphs;
     this.sections = sections;
@@ -15,7 +15,7 @@ export class Section {
 }
 
 export class Paragraph {
-  constructor( id = -1, body = "--"){
+  constructor(id = -1, body = "--") {
     this.id = id;
     this.body = body;
   }
